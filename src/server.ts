@@ -39,7 +39,7 @@ export default function startServer() {
     return app
 }
 
-// startServer()
+startServer()
 
 
 
