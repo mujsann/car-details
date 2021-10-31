@@ -5,10 +5,8 @@
   "main": "server.js",
   "engines": { "node": "14.17.5" },
   "scripts": {
-    "postinstall": "tsc",
-    "watch-ts": "tsc -w",
-    "start": "node src/server",
-    "build": "tsc -p .",
+    "start": "node dist/server.js",
+    "build": "tsc",
     "dev": "ts-node-dev --respawn --pretty --transpile-only  tsconfig-paths/register src/server.ts",
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }'  mocha --check-leaks -r tsconfig-paths/register -r ts-node/register \"tests/**/*.spec.ts\"",
     "deploy": "git add . && git commit -m Heroku && git push heroku master"
