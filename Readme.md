@@ -14,7 +14,7 @@ This endpoint takes parameters **make** and **year** of the car's model and retu
 **3. GET /api/v1/cars/details/<VIN>**.  
 This endpoint takes the VIN of a car as a parameter and returns the year, make and model of the car. 
 
-You can check out the swagger.io API documentation [file]('https:www.github.com/mujsann/car-details/swagger.yaml') for this app
+You can check out the swagger.io API documentation [file](https://www.github.com/mujsann/car-details/swagger.yaml) for this app
 
 ## Usage
 
