@@ -1,5 +1,3 @@
-import { Interface } from "readline";
-
 
 export interface Car {
    
@@ -13,8 +11,6 @@ export interface Car {
 export interface Cars {
     [key:number] : Car
 }
-
-
 
 
 

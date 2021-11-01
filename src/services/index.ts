@@ -1,6 +1,5 @@
 
-// Data Model
-import { AllMakesDetails, VINDetails } from "../Interfaces"
+import { AllMakesDetails, VINDetails } from "../Interfaces" // data models
 import axios from 'axios';
 import { json } from "stream/consumers";
 
@@ -50,14 +49,14 @@ export const getDetailsWithVIN = async (vin: string): Promise<VINDetails | [] | 
     const { data } = await axios.get(`https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValues/${vin}?format=json`)
 
     let result: VINDetails | []
-      result = {
-        year: data.Results[0].ModelYear,
-        make: data.Results[0].Make,
-        model: data.Results[0].Model
-      }
+    result = {
+      year: data.Results[0].ModelYear,
+      make: data.Results[0].Make,
+      model: data.Results[0].Model
+    }
 
-     return result.year && result.make.length && result.model.length
-            ? result : []
+    return result.year && result.make.length && result.model.length
+      ? result : []
 
   } catch (err) {
     return `${err}`

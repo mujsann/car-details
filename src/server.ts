@@ -1,9 +1,10 @@
+//external modules
 import * as dotenv from "dotenv";
 import express, { Application } from "express";
 import cors from "cors";
 const logger = require("morgan")
 
-// Environmental variables
+//dotenv
 dotenv.config()
 if (!process.env.PORT) {
     process.exit(1)
@@ -25,14 +26,14 @@ export default function startServer() {
     app.set("trust proxy", 1);
     app.use("/", router)
 
-    //start server
+    //listen on port
     app.listen(port, () => console.log(`Server is running on port ${port}`));
 
 
     return app
 }
 
-// startServer()
+
 
 
 

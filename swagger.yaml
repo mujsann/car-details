@@ -1,0 +1,98 @@
+---
+openapi: 3.0.0
+info:
+  title: Car details
+  description: |
+    This is a typescript/nodeJS backend API service for retrieving car details. Upon receiving a request from the client, the API endpoints make appropriate requests to retrieve the car's information.
+  contact:
+    email: mujsann@gmail.com
+  license:
+    name: MIT
+    url: https://choosealicense.com/licenses/mit/
+  version: 1.0.0
+servers:
+- url: https://carshair.herokuapp.com/
+  description: Heroku Server
+tags:
+- name: car
+  description: Refers to all types of vehicles
+- name: make
+  description: Refers to car manufacturers e.g 'toyota'
+- name: model
+  description: Name given to car by manufacturer e.g 'toyota camry'
+- name: VIN
+  description: Vehicle Identification Number
+paths:
+  /api/v1/cars/makes:
+    get:
+      tags:
+      - make
+      description: Finds all makes
+      responses:
+        "200":
+          description: successful request and response
+        "404":
+          description: unsuccessful operation
+        "500":
+          description: server error
+  /api/v1/cars/models/{make}/{year}:
+    get:
+      tags:
+      - model
+      description: Returns models of cars given the make and the year
+      parameters:
+      - name: make
+        in: path
+        description: make of a car
+        required: true
+        style: simple
+        explode: true
+        schema:
+          type: string
+      - name: year
+        in: path
+        description: year of the car's model
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: successful request and response
+          content:
+            application/json:
+              schema:
+                type: object
+        "404":
+          description: unsuccessful operation
+        "500":
+          description: server error
+  /api/v1/cars/details/{VIN}:
+    get:
+      tags:
+      - VIN
+      summary: Find pet by ID
+      description: Returns year, make and model of a car, given the VIN.
+      parameters:
+      - name: VIN
+        in: path
+        description: Vehicle Identification Number
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: successful request and response
+          content:
+            application/json:
+              schema:
+                type: object
+        "404":
+          description: unsuccessful operation
+        "500":
+          description: server error
+components: {}
