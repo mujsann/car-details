@@ -3,7 +3,7 @@ import express, { Application } from "express";
 import cors from "cors";
 const logger = require("morgan")
 
-// Environmental variables
+
 dotenv.config()
 if (!process.env.PORT) {
     process.exit(1)
@@ -32,7 +32,7 @@ export default function startServer() {
     return app
 }
 
-startServer()
+
 
 
 

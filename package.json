@@ -5,7 +5,7 @@
   "main": "server.js",
   "engines": { "node": "14.17.5" },
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "node dist/app.js",
     "build": "tsc",
     "dev": "ts-node-dev --respawn --pretty --transpile-only  tsconfig-paths/register src/server.ts",
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }'  mocha --check-leaks -r tsconfig-paths/register -r ts-node/register \"tests/**/*.spec.ts\"",
