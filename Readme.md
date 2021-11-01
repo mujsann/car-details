@@ -1,6 +1,6 @@
 # CarDetails 
 
-This is a typescript/nodeJS backend API service for retrieving car details. Upon receiving a request from the client, the API endpoints make appropriate requests to National Highway Traffic Safety Administration (NHTSA) APIs to retrieve the car's information. The API endpoints of this project are publicly available at [https://www.carshair.herokuapp.com/](https://www.carshair.herokuapp.com/)
+This is a typescript/nodeJS backend API service for retrieving car details. Upon receiving a request from the client, the API endpoints make appropriate requests to National Highway Traffic Safety Administration (NHTSA) APIs to retrieve the car's information. The API endpoints of this project are publicly available at [https://carshair.herokuapp.com/](https://www.carshair.herokuapp.com/)
 
 
 This app has 3 endpoints:
