@@ -8,10 +8,10 @@ This app has 3 endpoints:
 **1. GET /api/v1/cars/makes.**  
   This endpoint calls the NHTSA's '/vehicles/GetAllMakes' to retrieve car makes and returns all car makes after filtering the raw data e.g ("toyota", "honda).  
 
-**2. GET /api/v1/cars/models/<make>/<year>**      
+**2. GET /api/v1/cars/models/{make}/{year}**      
 This endpoint takes parameters **make** and **year** of the car's model and returns all models of cars produced by the **make** for the **year**.  
  
-**3. GET /api/v1/cars/details/<VIN>**.  
+**3. GET /api/v1/cars/details/{VIN}**.  
 This endpoint takes the VIN of a car as a parameter and returns the year, make and model of the car. 
 
 You can check out the swagger.io API documentation [file](https://www.github.com/mujsann/car-details/swagger.yml) for this app
