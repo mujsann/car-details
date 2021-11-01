@@ -8,20 +8,20 @@ This app has 3 endpoints:
 **1. GET /api/v1/cars/makes.**  
   This endpoint calls the NHTSA's '/vehicles/GetAllMakes' to retrieve car makes and returns all car makes after filtering the raw data e.g ("toyota", "honda).  
 
-**2. GET /api/v1/cars/models/<make>/<year>**      
+**2. GET /api/v1/cars/models/{make}/{year}**      
 This endpoint takes parameters **make** and **year** of the car's model and returns all models of cars produced by the **make** for the **year**.  
  
-**3. GET /api/v1/cars/details/<VIN>**.  
+**3. GET /api/v1/cars/details/{VIN}**.  
 This endpoint takes the VIN of a car as a parameter and returns the year, make and model of the car. 
 
-You can check out the swagger.io API documentation [file]('https:www.github.com/mujsann/car-details/swagger.yaml') for this app
+You can check out the swagger.io API documentation [file](https://www.github.com/mujsann/car-details/swagger-api.yml) for this app
 
 ## Usage
 
 To use this project, clone this git repo.
 
 ```bash
-git clone https://www.github.com/mujsann/car-details.com
+git clone https://www.github.com/mujsann/car-details
 ```
 
 Install all the dependencies. 
@@ -39,7 +39,7 @@ To run the app locally, run it in development mode.
 ```bash
 npm run dev
 ```
-You'll see in your console that the server has started running on port 5000. Now you can go to your browser and test out the three endpoints on localhost:5000. 
+You'll see in your console that the server has started running on port 5000. Now you can go to your browser and test out the three endpoints on localhost:5000 
 
 ```javascript
 /** Example requests **/
