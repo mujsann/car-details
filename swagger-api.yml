@@ -72,7 +72,6 @@ paths:
     get:
       tags:
       - VIN
-      summary: Find pet by ID
       description: Returns year, make and model of a car, given the VIN.
       parameters:
       - name: VIN
